@@ -18,16 +18,16 @@ from smooth_filter import smooth_filter
 
 
 parser = argparse.ArgumentParser(description='Photorealistic Image Stylization')
-parser.add_argument('--vgg1', default='./models/vgg_normalised_conv1_1_mask.t7', help='Path to the VGG conv1_1')
-parser.add_argument('--vgg2', default='./models/vgg_normalised_conv2_1_mask.t7', help='Path to the VGG conv2_1')
-parser.add_argument('--vgg3', default='./models/vgg_normalised_conv3_1_mask.t7', help='Path to the VGG conv3_1')
-parser.add_argument('--vgg4', default='./models/vgg_normalised_conv4_1_mask.t7', help='Path to the VGG conv4_1')
-parser.add_argument('--vgg5', default='./models/vgg_normalised_conv5_1_mask.t7', help='Path to the VGG conv5_1')
-parser.add_argument('--decoder5', default='./models/feature_invertor_conv5_1_mask.t7', help='Path to the decoder5')
-parser.add_argument('--decoder4', default='./models/feature_invertor_conv4_1_mask.t7', help='Path to the decoder4')
-parser.add_argument('--decoder3', default='./models/feature_invertor_conv3_1_mask.t7', help='Path to the decoder3')
-parser.add_argument('--decoder2', default='./models/feature_invertor_conv2_1_mask.t7', help='Path to the decoder2')
-parser.add_argument('--decoder1', default='./models/feature_invertor_conv1_1_mask.t7', help='Path to the decoder1')
+parser.add_argument('--vgg1', default='/data/models/vgg_normalised_conv1_1_mask.t7', help='Path to the VGG conv1_1')
+parser.add_argument('--vgg2', default='/data/models/vgg_normalised_conv2_1_mask.t7', help='Path to the VGG conv2_1')
+parser.add_argument('--vgg3', default='/data/models/vgg_normalised_conv3_1_mask.t7', help='Path to the VGG conv3_1')
+parser.add_argument('--vgg4', default='/data/models/vgg_normalised_conv4_1_mask.t7', help='Path to the VGG conv4_1')
+parser.add_argument('--vgg5', default='/data/models/vgg_normalised_conv5_1_mask.t7', help='Path to the VGG conv5_1')
+parser.add_argument('--decoder5', default='/data/models/feature_invertor_conv5_1_mask.t7', help='Path to the decoder5')
+parser.add_argument('--decoder4', default='/data/models/feature_invertor_conv4_1_mask.t7', help='Path to the decoder4')
+parser.add_argument('--decoder3', default='/data/models/feature_invertor_conv3_1_mask.t7', help='Path to the decoder3')
+parser.add_argument('--decoder2', default='/data/models/feature_invertor_conv2_1_mask.t7', help='Path to the decoder2')
+parser.add_argument('--decoder1', default='/data/models/feature_invertor_conv1_1_mask.t7', help='Path to the decoder1')
 args = parser.parse_args()
 
 # Load model
@@ -39,7 +39,7 @@ content_image_path = "./images/content1.png"
 content_seg_path = []
 style_image_path = "./images/style1.png"
 style_seg_path = []
-output_image_path = "results/example1.png"
+output_image_path = "/output/example1.png"
 
 # Load image
 cont_img = Image.open(content_image_path).convert('RGB')

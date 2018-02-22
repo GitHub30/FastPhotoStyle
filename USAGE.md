@@ -2,6 +2,17 @@
 Copyright (C) 2018 NVIDIA Corporation.  All rights reserved.
 Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
+### Run on FloydHub
+
+```bash
+pip install floyd-cli
+floyd login
+git clone -b floydhub https://github.com/GitHub30/FastPhotoStyle.git
+cd FastPhotoStyle
+floyd init projectname
+floyd run --gpu --env pytorch-0.3:py2 --data salamander_jp/datasets/fastphotostyle/1:data 'pip install pynvrtc && python demo.py'
+```
+
 
 ### Preparation 1: Setup environment and install required libraries
 
